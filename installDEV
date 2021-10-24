@@ -1,0 +1,65 @@
+#Installs React Foundation
+echo "executing installDEV"
+sleep 3
+clear
+
+#STATEMENT WHAT THE PROGRAM WILL RUN
+echo "THIS PROGRAM WILL INSTALL CREATE REACT APP ENVIRONMENT AND IT'S DEPENDENCIES"
+echo "Node Version: " + $(node -v)
+echo "NPM Version " +$(npm -v)
+
+#PAUSE PROGRAM FOR A MOMENT
+sleep 5
+
+#CLEARS THE SCREEN
+clear
+
+#ASK FOR THE NAME OF THE APP
+echo "NAME FOR THE APP? No CAPITAL LETTERS"
+read APPNAME
+
+
+#VERBOSE INSTALL OF CREATE-REACT-APP
+echo "Installing Create-React-App"
+npx create-react-app $APPNAME
+
+#PAUSE
+sleep 5
+
+#STORING PRESENT DIRECTORY AS THE ROOT FOR THE APP
+$NOSHROOT=$PWD
+
+#CLEAR AWAY CREATE-REACT VERBOSE FROM SCREEN
+clear
+
+#INSTALL BOOTSTRAP
+echo "INSTALLING BOOTSTRAP"
+sleep 5
+cd $APPNAME
+npm install bootstrap
+
+#INSTALL REACT-BOOTSTRAP
+echo "INSTALLING REACT-BOOTSTRAP"
+sleep 5
+npm install react-bootstrap
+
+#INSTALL AXIOS
+echo "INSTALLING AXIOS"
+sleep 5
+npm i axios
+
+#CREATING COMPONENT FOLDER
+echo "CREATING COMPONENT FOLDER"
+mkdir components
+cd components
+sleep 2
+
+#CREATING BODY AND NAV COMPONENT FILES
+touch body.js nav.js
+echo "import react from 'react'" | tee -a *.js
+echo "import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';" | tee -a *.js
+
+#CHANGING DICTORIES TO EDIT SRC FOLDER FILES
+cd $NOSHROOT/src
+
+#END OF SCRIPT
