@@ -7,7 +7,7 @@ import MealCard from './card.js'
 
 
 
-class Body extends React.Component{
+class MealPlanCarousel extends React.Component{
 	constructor(props){
 		super(props);
 	}
@@ -41,4 +41,4 @@ class Body extends React.Component{
 
 }
 
-export default Body;
+export default MealPlanCarousel;
