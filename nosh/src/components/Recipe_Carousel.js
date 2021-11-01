@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Card, ListGroupItem, ListGroup, Carousel } from 'react-bootstrap';
+import { Button, Card, ListGroupItem, ListGroup, Carousel, CardGroup } from 'react-bootstrap';
+import Recipe_Card from './Recipe_Card.js';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -14,11 +15,11 @@ class Recipe_Carousel extends React.Component{
 		return(
 			<div className="Breakfast">
 				<p>CAROUSEL HERE</p>
-				<Carousel variant="dark" >
+				<Carousel variant="dark" controls={false} indicators={false}>
 					<Carousel.Item > 
-						<p>ITEM 1</p>
-						<p>ITEM 1</p>
-						<p>ITEM 1</p>
+						<CardGroup>
+							<Recipe_Card />
+						</CardGroup>
 					</Carousel.Item>
 
 					<Carousel.Item>
