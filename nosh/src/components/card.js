@@ -57,16 +57,19 @@ class MealCard extends React.Component{
 					</ListGroupItem>
 
 					<ListGroupItem>
+						<h5>Breakfast</h5>
 						<Recipe_Carousel />
 					</ListGroupItem>
 
 					
 					<ListGroupItem>
+						<h5>Lunch</h5>
 						<Recipe_Carousel />
 					</ListGroupItem>
 
 
 					<ListGroupItem>
+						<h5>Dinner</h5>
 						<Recipe_Carousel />
 					</ListGroupItem>
 

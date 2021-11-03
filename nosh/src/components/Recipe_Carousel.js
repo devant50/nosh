@@ -14,20 +14,56 @@ class Recipe_Carousel extends React.Component{
 	render(){
 		return(
 			<div className="Breakfast">
-				<p>CAROUSEL HERE</p>
 				<Carousel variant="dark" controls={false} indicators={false}>
+					<Carousel.Item >
+						 				
+						<table>
+							<tr>
+								<td>
+									<Recipe_Card />
+								</td>
+								<td>
+									<Recipe_Card />
+								</td>
+								<td>
+									<Recipe_Card />
+								</td>
+							</tr>
+						</table>
+					</Carousel.Item>
+
 					<Carousel.Item > 
-						<CardGroup>
-							<Recipe_Card />
-						</CardGroup>
+										
+						<table>
+							<tr>
+								<td>
+									<Recipe_Card />
+								</td>
+								<td>
+									<Recipe_Card />
+								</td>
+								<td>
+									<Recipe_Card />
+								</td>
+							</tr>
+						</table>
 					</Carousel.Item>
 
-					<Carousel.Item>
-						<p>ITEM 1</p>
-					</Carousel.Item>
-
-					<Carousel.Item>	
-						<p>ITEM 1</p>
+					<Carousel.Item >
+										
+						<table>
+							<tr>
+								<td>
+									<Recipe_Card />
+								</td>
+								<td>
+									<Recipe_Card />
+								</td>
+								<td>
+									<Recipe_Card />
+								</td>
+							</tr>
+						</table>
 					</Carousel.Item>
 				</Carousel>
 			</div>

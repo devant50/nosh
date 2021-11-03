@@ -18,11 +18,13 @@ class MealPlanCarousel extends React.Component{
 		return(
 			<div>
 				<Carousel variant="dark" controls={false} indicators={false}>
-				  <Carousel.Item interval="10000"> 
-				  	 <MealCard image={this.props.images[0]}/>
+				  <Carousel.Item interval="10000">.
+				  	 
+				  	<MealCard image={this.props.images[0]}/>
 				  </Carousel.Item>
 
 				  <Carousel.Item>
+					
 				    <MealCard image={this.props.images[1]}/>
 				  </Carousel.Item>
 

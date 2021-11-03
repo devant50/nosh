@@ -3,7 +3,6 @@ import { Button, Card, CardGroup, ListGroup, ListGroupItem, Table, Carousel } fr
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-
 class Recipe_Card extends React.Component{
 	constructor(props){
 		super(props);
@@ -13,21 +12,12 @@ class Recipe_Card extends React.Component{
 	render(){
 		return(
             <div>
-                <table>
-                    <tr>
-                        <td>
-                            <p>Google</p>
-                        </td>
-                        <td>
-                            <p>Bing</p>
-                        </td>
-                        <td>
-                            <p>OK</p>
-                        </td>
-                    </tr>
-
-
-                </table>
+                <Card style={{ width: '8rem' }}>
+                <Card.Img variant="top" src="../logo.svg" />
+                <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                </Card.Body>
+                </Card>
             </div>
 
 

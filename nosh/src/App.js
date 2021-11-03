@@ -8,6 +8,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Navbr from './components/nav.js';
 import MealPlanCarousel from './components/MealPlanCarousel.js';
 
+
+
+
 function App() {
   return (
     <div className="App">
