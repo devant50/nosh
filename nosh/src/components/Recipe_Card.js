@@ -15,7 +15,7 @@ class Recipe_Card extends React.Component{
                 <Card style={{ width: '8rem' }}>
                 <Card.Img variant="top" src="../logo.svg" />
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>{this.props.name}</Card.Title>
                 </Card.Body>
                 </Card>
             </div>
