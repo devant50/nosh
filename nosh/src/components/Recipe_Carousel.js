@@ -12,6 +12,8 @@ class Recipe_Carousel extends React.Component{
 
 
 	render(){
+
+		
 		return(
 			<div className="Breakfast">
 				<Carousel variant="dark" controls={false} indicators={false}>
