@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 class MealCard extends React.Component{
 	constructor(props){
 		super(props);
+		
 	}
 
 
@@ -57,20 +58,20 @@ class MealCard extends React.Component{
 					</ListGroupItem>
 
 					<ListGroupItem>
-						<h5>Breakfast</h5>
-						<Recipe_Carousel />
+						<h5> {this.props.diet} Breakfast</h5>
+						<Recipe_Carousel  diet={this.props.diet} mealType="breakfast"/>
 					</ListGroupItem>
 
 					
 					<ListGroupItem>
-						<h5>Lunch</h5>
-						<Recipe_Carousel />
+						<h5>{this.props.diet} Lunch</h5>
+						<Recipe_Carousel diet={this.props.diet} mealType="Lunch"/>
 					</ListGroupItem>
 
 
 					<ListGroupItem>
-						<h5>Dinner</h5>
-						<Recipe_Carousel />
+						<h5>{this.props.diet} Dinner</h5>
+						<Recipe_Carousel diet={this.props.diet} mealType="Dinner" />
 					</ListGroupItem>
 
 					
