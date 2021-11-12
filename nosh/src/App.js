@@ -7,6 +7,7 @@ import lunch_2 from './IMG/Lunch_2.png';
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbr from './components/nav.js';
 import MealPlanCarousel from './components/MealPlanCarousel.js';
+//import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 

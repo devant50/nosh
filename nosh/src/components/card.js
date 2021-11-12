@@ -8,13 +8,25 @@ import 'bootstrap/dist/css/bootstrap.css';
 class MealCard extends React.Component{
 	constructor(props){
 		super(props);
+		this.state = {
+			show: false,
+		}
 		
 	}
 
 
 	render(){
+		let { show } = this.state;
+
 		return(
-			<div >
+
+		// Toggle between hiding the expanded details and revealing
+		// depending on whether or not the graphic card is selected
+
+			<div onClick={()=> {
+				this.setState({show:!show})
+			}}>
+
 				<Card style={{ width: '100%'}} className="mt-3">
 				  <Card.Img className="rounded mx-auto d-block" variant="top" src={this.props.image} style={{ width: '80%'}} />
 				  <Card.Body>
@@ -25,7 +37,6 @@ class MealCard extends React.Component{
 				    </Card.Text>
 				  </Card.Body>
 				  <ListGroup className="list-group-flush">
-				    <ListGroupItem></ListGroupItem>
 				    <ListGroupItem>
 						<div className="Breakfast">
 						<Table striped bordered hover>
@@ -45,36 +56,40 @@ class MealCard extends React.Component{
 						</Table>
 						</div>
 					</ListGroupItem>
+		
 
-					
-				    <ListGroupItem>
-						<div className="btn-group">
-							<a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
-							<a href="#" class="btn btn-primary">Link</a>
-						</div>
-					</ListGroupItem>
-					<ListGroupItem>
-						<h2>Meals</h2>
-					</ListGroupItem>
+		{/* Hides Expanded Details until the graphic is clicked */}
+					{show?
+					<div className='expanded'>
+						<ListGroupItem>
+							<div className="btn-group">
+								<a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
+								<a href="#" class="btn btn-primary">Link</a>
+							</div>
+						</ListGroupItem>
+						<ListGroupItem>
+							<h2>Meals</h2>
+						</ListGroupItem>
 
-					<ListGroupItem>
-						<h5> {this.props.diet} Breakfast</h5>
-						<Recipe_Carousel  diet={this.props.diet} mealType="breakfast"/>
-					</ListGroupItem>
+						<ListGroupItem>
+							<h5> {this.props.diet} Breakfast</h5>
+							<Recipe_Carousel  diet={this.props.diet} mealType="breakfast"/>
+						</ListGroupItem>
 
-					
-					<ListGroupItem>
-						<h5>{this.props.diet} Lunch</h5>
-						<Recipe_Carousel diet={this.props.diet} mealType="Lunch"/>
-					</ListGroupItem>
+						
+						<ListGroupItem>
+							<h5>{this.props.diet} Lunch</h5>
+							<Recipe_Carousel diet={this.props.diet} mealType="Lunch"/>
+						</ListGroupItem>
 
 
-					<ListGroupItem>
-						<h5>{this.props.diet} Dinner</h5>
-						<Recipe_Carousel diet={this.props.diet} mealType="Dinner" />
-					</ListGroupItem>
+						<ListGroupItem>
+							<h5>{this.props.diet} Dinner</h5>
+							<Recipe_Carousel diet={this.props.diet} mealType="Dinner" />
+						</ListGroupItem>
 
-					
+					</div>:null
+					}
 
 				  </ListGroup>
 				  <Card.Body>

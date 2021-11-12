@@ -44,7 +44,8 @@ class Recipe_Carousel extends React.Component{
 			.then((json) =>{
 				this.setState({
 					isLoaded:true,
-					recipesArray: json.hits
+					recipesArray: json.hits,
+					num: 0
 				})
 			})
 			//.then((data) => console.log(this.state.recipesArray))
@@ -68,13 +69,13 @@ class Recipe_Carousel extends React.Component{
 					<table>
 						<tbody>
 							<tr>
-							{recipesArray.map((item) => (
-								<td>
-									<Recipe_Card recipe={item.recipe} />
-									{/* {console.log(item.recipe)} */}
-								</td>
-								
-							))};
+								{recipesArray.map((item) => (
+									<td>
+										<Recipe_Card recipe={item.recipe} />
+										{console.log(item.recipe)}
+									</td>
+									
+								))};
 							</tr>
 						</tbody>
 					</table>

@@ -17,7 +17,7 @@ class MealPlanCarousel extends React.Component{
 		return(
 			<div>
 				<Carousel variant="dark" controls={false} indicators={false}>
-				  <Carousel.Item interval="500">.
+				  <Carousel.Item>.
 				  	 
 				  	<MealCard diet="Vegan" image={this.props.images[0]}/>
 				  </Carousel.Item>
